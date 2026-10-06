@@ -17,11 +17,14 @@ header{background:#E8F5ED;border:1px solid #C6E4D1;border-radius:16px;padding:28
 th:nth-child(6),th:nth-child(6) button,td:nth-child(6){text-align:right}
 td:nth-child(6){font-variant-numeric:tabular-nums;white-space:nowrap}
 @media(max-width:600px){header{padding:22px 18px}}
+/* 제목 옆에 고정 기준월을 작은 글씨로 표시합니다. */
+.title-row{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px}
+.reference-date{font-size:13px;font-weight:400;color:var(--muted);white-space:nowrap}
 </style>
 </head>
 <body>
 <main>
-<header><div class="eyebrow">BOOK COLLECTION / DATA OVERVIEW</div><h1>도서 데이터 대시보드</h1><p>50권의 도서를 가격과 출판사별로 한눈에 살펴보세요.</p></header>
+<header><div class="eyebrow">BOOK COLLECTION / DATA OVERVIEW</div><div class="title-row"><h1>도서 데이터 대시보드</h1><span class="reference-date">2026년 10월 기준</span></div><p>50권의 도서를 가격과 출판사별로 한눈에 살펴보세요.</p></header>
 <!-- 요약 카드는 검색과 무관하게 전체 데이터 기준입니다. -->
 <section class="kpis" aria-label="전체 도서 요약">
 <div class="card"><div class="kpi-label">전체 도서 수</div><div class="number"><span id="total"></span><span class="unit">권</span></div><div class="detail">세트 상품도 한 항목으로 집계</div></div>
